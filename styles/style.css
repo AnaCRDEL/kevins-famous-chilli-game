@@ -1,0 +1,83 @@
+html {
+    background-color: gray;
+}
+body {
+    margin: 0px 20px 20px 20px;
+    padding: 0;
+    text-decoration: none;
+}
+.game-intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.game-start {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#game-img {
+    width: 350px;
+    padding-bottom: 20px;
+}
+#start-button {
+    background-color: black;
+    color: lightgray;
+    padding: 20px 40px 20px 40px;
+    font-size: 25px;
+    text-align: center;
+}
+.game-rules {
+    font-size: 30px;
+    color: white;
+    text-align: left;
+    padding-left: 100px;
+    line-height: 0px;
+}
+.game-rules h1 {
+    font-size: 35px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.arrow {
+    width: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#onion {
+    width: 30px;
+    padding-left: 10px;
+}
+#pepper, #beans {
+    width: 45px;
+}
+#michael-parkour {
+    width: 90px;
+}
+#jello {
+    width: 35px;
+    padding-left: 10px;
+}
+#dundie {
+    width: 40px;
+}
+#beet {
+    width: 50px;
+}
+#photocopier {
+    width: 80px;;
+}
+.game-board {
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+}
+.game-score {
+    display: none;
+    font-size: 30px;
+    color: white;
+    text-align: left;
+    padding-left: 80px;
+    line-height: 0px;
+}
+

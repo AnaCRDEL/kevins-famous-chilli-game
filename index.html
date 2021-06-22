@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Kevin's Famous Chilli</title>
+</head>
+<body>
+    <!--Intro Game section-->
+    <section class="game-intro">
+      <div class="game-start">
+        <img src="./images/game-logo.png" alt="game-logo" id="game-img" />
+        <button id="start-button">Start Game</button>
+      </div>
+      <div class="game-rules">
+        <h1>HOW TO PLAY:</h1>
+        <p>Use <img src="images/left-key.png" alt="left-arrow-img" class="arrow"> and <img src="images/right-key.png" alt="right-arrow-img" class="arrow"> keys to control Kevin.</p>
+        <p>Catch <img src="images/onion.png" alt="onion-img" id="onion"> <img src="images/pepper.png" alt="pepper-img" id="pepper"> <img src="images/beans.png" alt="beans-img" id="beans"> to earn points.</p>
+        <p>Catch<img src="images/michael-parkour.png" alt="michael-parkour-img" id="michael-parkour">to increase Kevin's speed.</p>
+        <p>Avoid <img src="images/jello.png" alt="jello-img" id="jello"> <img src="images/dundie-award.png" alt="dundie-img" id="dundie"> <img src="images/beet.png" alt="beet-img" id="beet"> to not lose points.</p>
+        <p>Escape from <img src="images/photocopier.png" alt="photocopier-img" id="photocopier"> to not get crushed.</p>
+      </div>
+    </section>
+    
+    <!--Game section-->
+    <section class="game-board">
+      <div class="canvas">
+        <canvas id="canvas" width="1000" height="700"></canvas>
+      </div>
+      <div class="game-score">
+        <p>SCORE: <span id="current-score">0</span></p>
+      </div>
+      <div class="about-me">
+        
+      </div>
+    </section>
+    
+  
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
