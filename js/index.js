@@ -1,30 +1,31 @@
 const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const context = canvas.getContext('2d');
 const startButton = document.getElementById('start-button');
+const newController = new Controller(canvas, context);
 
-
-function drawOffice() {
-    const officeImg = new Image();
-    officeImg.src = 'images/background.png';
-    officeImg.onload = function() {
-        ctx.globalAlpha = 0.4;
-        ctx.drawImage(officeImg, 0, 0, 1000, 700);
-    };
-};
-
-function showScore() {
-    let score = document.querySelector(".game-score");
-    score.style.display = "block";
-};
-
-function startGame() {
-    drawOffice();
-    showScore();
-    startButton.innerText = 'Restart Game';
-};
 
 if (startButton) {
     startButton.addEventListener('click', event => {
-      startGame();
+      newController.startGame();
+      startButton.innerText = 'Restart';
     });
 };
+
+document.addEventListener('keydown', (e) => {
+  switch (e.code) {
+    case 'ArrowLeft':
+    case 'KeyA':
+      newController.player.speed -= 4;
+      break;
+    case 'ArrowRight':
+    case 'KeyD':
+      newController.player.speed += 4;
+      break;
+  };
+  newController.player.move();
+  newController.updateCanvas();
+});
+
+document.addEventListener('keyup', (e) => {
+  newController.player.speed = 0;
+});
