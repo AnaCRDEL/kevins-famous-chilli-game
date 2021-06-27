@@ -8,38 +8,37 @@
     <title>Kevin's Famous Chilli</title>
 </head>
 <body>
-    <!--Intro Game section-->
-    <section class="game-intro">
-      <div class="game-start">
-        <img src="./images/game-logo.png" alt="game-logo" id="game-img" />
-        <button id="start-button">Start Game</button>
-      </div>
+  <nav id="navbar">
+    <div class="navbar-img">
+      <img src="./images/game-logo.png" alt="img-logo" width="100" id="game-img">
+    </div>
+    <div class="navbar-menu">
+      <a href="">About the Game</a>
+      <a href="">About me</a>
+    </div>
+    <div class="button-div">
+      <button id="start-button">Start Game</button>
+    </div>
+    <div class="game-score">
+      <p>SCORE: <span id="current-score">0</span></p>
+    </div>
+  </nav>
+    <!--Game Rules-->
+    <section class="game">
       <div class="game-rules">
         <h1>HOW TO PLAY:</h1>
         <p>Use <img src="images/left-key.png" alt="left-arrow-img" class="arrow"> and <img src="images/right-key.png" alt="right-arrow-img" class="arrow"> keys to control Kevin.</p>
         <p>Catch <img src="images/onion.png" alt="onion-img" id="onion"> <img src="images/pepper.png" alt="pepper-img" id="pepper"> <img src="images/beans.png" alt="beans-img" id="beans"> to earn points.</p>
-        <p>Catch<img src="images/michael-parkour.png" alt="michael-parkour-img" id="michael-parkour">to increase Kevin's speed.</p>
+        <p>Catch<img src="images/michael-parkour.png" alt="michael-parkour-img" id="michael-parkour">to get 10 points.</p>
         <p>Avoid <img src="images/jello.png" alt="jello-img" id="jello"> <img src="images/dundie-award.png" alt="dundie-img" id="dundie"> <img src="images/beet.png" alt="beet-img" id="beet"> to not lose points.</p>
         <p>Escape from <img src="images/photocopier.png" alt="photocopier-img" id="photocopier"> to not get crushed.</p>
       </div>
-    </section>
-    
-    <!--Game section-->
-    <section class="game-board">
+      <!--Game Area-->
       <div class="canvas">
-        <canvas id="canvas" width="1000" height="700"></canvas>
-      </div>
-      <div class="game-score">
-        <p>SCORE: <span id="current-score">0</span></p>
-      </div>
-      <div class="about-me">
-        
+        <canvas id="canvas" width="1000" height="680"></canvas>
       </div>
     </section>
     
-    <script type="text/javascript" src="js/game-falling-object.js"></script>
-    <script type="text/javascript" src="js/game-player.js"></script>
-    <script type="text/javascript" src="js/game-background.js"></script>
     <script type="text/javascript" src="js/game-controller.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 </body>
