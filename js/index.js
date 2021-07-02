@@ -13,15 +13,43 @@ window.onload = () => {
   let scoreNumber = document.getElementById('current-score');
   const gameOver = new Image;
   gameOver.src = './images/game-over.png';
+  let isGameOver = false;
+  let isGameRunning = false;
+  const gameWin = new Image;
+  gameWin.src = './images/michael-win.png';
 
   function showScore() {
     score.style.display = "block";
   };
 
   function startGame() {
-    animationId = setInterval(updateCanvas, 10);
-    showScore();
+    if (isGameRunning === false) {
+      animationId = setInterval(updateCanvas, 10);
+      document.getElementById('start-button').innerText = 'Restart Game';
+      showScore();
+      isGameRunning = true;
+    } else {
+      restartGame();
+    }
   }
+
+  function restartGame() {
+    clearCanvas();
+    clearInterval(animationId);
+    frames = 0;
+    ingredients = [];
+    obstacles = [];
+    powerUps = [];
+    superObstacles = [];  
+    background.score = 0;
+    scoreNumber.innerText = background.score;
+    player.posX = 350;
+    player.posY = 400;
+    isGameOver = false;
+    isGameRunning = false;
+    startGame();
+  }
+
 
   function createIngredient() {
     const min = Math.ceil(90);
@@ -146,13 +174,25 @@ window.onload = () => {
     let caught = superObstacles.some(function(superObstacle) {
       return player.checkCollision(superObstacle);
     });  
-    if (caught) {
+    if (caught || background.score < 0) {
+      isGameOver = true;
       clearInterval(animationId);
       clearCanvas();
       context.drawImage(gameOver, 0, 0, canvas.width, canvas.height);
       context.fillStyle = 'red';
       context.font = '50px Arial';
       context.fillText('GAME OVER', 400, 300);
+    };
+  }
+
+  function checkWin() {
+  if (background.score >= 50) {
+      clearInterval(animationId);
+      clearCanvas();
+      context.drawImage(gameWin, 0, 0, canvas.width, canvas.height);
+      context.fillStyle = 'green';
+      context.font = '50px Arial';
+      context.fillText('YOU DID GREAT!', 300, 50);
     };
   }
 
@@ -173,24 +213,26 @@ window.onload = () => {
     checkCatchPowerUp();
     updateSuperObstacles();
     checkGameOver();
+    checkWin();
   }
 
   document.getElementById('start-button').onclick = () => {
     startGame();
-    document.getElementById('start-button').innerText = 'Restart Game';
   };
 
   document.addEventListener('keydown', (event) => {
-    switch (event.code) {
-      case 'ArrowLeft':
-      case 'KeyA':
-        player.moveLeft();
-        break;
-      case 'ArrowRight':
-      case 'KeyD':
-        player.moveRight();
-        break;
-    };
-    updateCanvas();
+    if (isGameOver === false && isGameRunning === true) {
+      switch (event.code) {
+        case 'ArrowLeft':
+        case 'KeyA':
+          player.moveLeft();
+          break;
+        case 'ArrowRight':
+        case 'KeyD':
+          player.moveRight();
+          break;
+      };
+      updateCanvas();
+    }
   });
 }

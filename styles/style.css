@@ -1,5 +1,6 @@
 html {
     background-color: gray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 body {
     margin: 0px;
@@ -45,17 +46,20 @@ body {
     font-size: 30px;
     color: white;
     padding: 0px 0px 0px 100px;
+    /* display: flex; */
+    /* align-content: center; */
 }
 .game-rules {
-    font-size: 30px;
+    width: 800px;
+    font-size: 25px;
     color: white;
     text-align: left;
-    padding-left: 30px;
-    line-height: 0px;
-    padding-top: 70px;
+    margin-top: 60px;
+    margin-left: 35px;
+    line-height: 5px;
 }
 .game-rules h1 {
-    font-size: 35px;
+    font-size: 30px;
     padding-bottom: 20px;
     padding-top: 20px;
 }
@@ -91,4 +95,50 @@ body {
     display: flex;
     flex-direction: row;
     margin-left: 0px;
+}
+.about-game {
+    padding: 20px 0px 0px 220px;
+    font-size: 25px;
+    color: white;
+    line-height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.about-game p {
+    width: 500px;
+    white-space:pre-line;
+    text-align: justify;
+}
+
+#the-office {
+    width: 380px;
+    height: 480px;
+    padding-left: 10px;
+}
+#kevin-gif {
+    width: 350px;
+    height: 350px;
+    padding-left: 20px;
+}
+
+.about-me {
+    padding: 20px 0px 0px 220px;
+    font-size: 25px;
+    color: white;
+    line-height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.about-me p {
+    width: 700px;
+    white-space:pre-line;
+    text-align: justify;
+}
+
+#me-img {
+    width: 380px;
+    height: 480px;
+    padding-left: 10px;
 }

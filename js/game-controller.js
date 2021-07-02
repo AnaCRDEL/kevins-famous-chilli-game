@@ -218,7 +218,7 @@ class SuperObstacles {
             this.img = img;
         };
         img.src = './images/photocopier.png';
-        this.speed = 7;
+        this.speed = 5;
     };
 
     draw() {
