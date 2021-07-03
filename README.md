@@ -3,7 +3,7 @@
 
 A simple and fun game built in HTML, CSS and JavaScript, using Canvas and DOM.
 
-Click [here](https://anacrdel.github.io/kevins-famous-chilli-game/about-game.html) to play.
+Click [here](https://anacrdel.github.io/kevins-famous-chilli-game/index.html) to play.
 
 ABOUT THE GAME
 
