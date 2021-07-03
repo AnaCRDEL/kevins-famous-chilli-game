@@ -50,12 +50,11 @@ window.onload = () => {
     startGame();
   }
 
-
   function createIngredient() {
     const min = Math.ceil(90);
     const max = Math.floor(910);
     const ingredientX = Math.floor(Math.random() * (max - min)) + min;
-    ingredients.push(new Ingredients(canvas, context, ingredientX, 50, 40));
+    ingredients.push(new Ingredients(canvas, context, ingredientX, 40, 40));
   }
 
   function updateIngredients() {
@@ -154,7 +153,7 @@ window.onload = () => {
     const min = Math.ceil(90);
     const max = Math.floor(910);
     const superObstacleX = Math.floor(Math.random() * (max - min)) + min;
-    superObstacles.push(new SuperObstacles(canvas, context, superObstacleX, 180, 200));
+    superObstacles.push(new SuperObstacles(canvas, context, superObstacleX, 150, 180));
   }
 
   function updateSuperObstacles() {
