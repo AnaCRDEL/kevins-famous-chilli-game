@@ -121,22 +121,26 @@ body {
 }
 
 .about-me {
-    padding: 20px 0px 0px 220px;
-    font-size: 25px;
+    padding: 0px 0px 0px 220px;
+    font-size: 22px;
     color: white;
     line-height: 40px;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.about-me p {
-    width: 700px;
-    white-space:pre-line;
+#about-me-text {
+    width: 900px;
+    white-space: pre-line;
     text-align: justify;
 }
-
-#me-img {
-    width: 380px;
-    height: 480px;
-    padding-left: 10px;
+#links-img {
+    padding-left: 25px;
+    width: 800px;
+    white-space: pre-line;
+    text-align: justify;
 }
+#about-me-img{
+    width: 600px;
+}
+

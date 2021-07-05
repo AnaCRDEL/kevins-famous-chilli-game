@@ -185,7 +185,7 @@ window.onload = () => {
   }
 
   function checkWin() {
-  if (background.score >= 50) {
+  if (background.score >= 30) {
       clearInterval(animationId);
       clearCanvas();
       context.drawImage(gameWin, 0, 0, canvas.width, canvas.height);
